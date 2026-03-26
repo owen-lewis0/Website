@@ -12,38 +12,44 @@ menu.addEventListener('click', mobileMenu);
 
 // Show active menu when scrolling
 const highlightMenu = () => {
-  const elem = document.querySelector('.highlight');
   const homeMenu = document.querySelector('#home-page');
   const aboutMenu = document.querySelector('#about-page');
-  const servicesMenu = document.querySelector('#services-page');
+  const contactBtn = document.querySelector('#signup');
+
+  const servicesSection = document.querySelector('#services');
+  const contactSection = document.querySelector('#sign-up');
+
   let scrollPos = window.scrollY;
-  // console.log(scrollPos);
 
-  // adds 'highlight' class to my menu items
-  if (window.innerWidth > 960 && scrollPos < 600) {
-    homeMenu.classList.add('highlight');
-    aboutMenu.classList.remove('highlight');
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 1400) {
-    aboutMenu.classList.add('highlight');
+  // Get the top positions of each section
+  const servicesTop = servicesSection ? servicesSection.offsetTop - 100 : 600;
+  const contactTop = contactSection ? contactSection.offsetTop - 100 : 2345;
+
+  if (window.innerWidth > 960) {
+    // Remove all highlights first
     homeMenu.classList.remove('highlight');
-    servicesMenu.classList.remove('highlight');
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 2345) {
-    servicesMenu.classList.add('highlight');
     aboutMenu.classList.remove('highlight');
-    return;
-  }
+    contactBtn.classList.remove('highlight');
 
-  if ((elem && window.innerWIdth < 960 && scrollPos < 600) || elem) {
-    elem.classList.remove('highlight');
+    if (scrollPos < servicesTop) {
+      homeMenu.classList.add('highlight');
+    } else if (scrollPos < contactTop) {
+      aboutMenu.classList.add('highlight');
+    } else {
+      contactBtn.classList.add('highlight');
+    }
+  } else {
+    // Remove highlights on mobile
+    homeMenu.classList.remove('highlight');
+    aboutMenu.classList.remove('highlight');
+    contactBtn.classList.remove('highlight');
   }
 };
 
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
 
-//  Close mobile Menu when clicking on a menu item
+// Close mobile Menu when clicking on a menu item
 const hideMobileMenu = () => {
   const menuBars = document.querySelector('.is-active');
   if (window.innerWidth <= 768 && menuBars) {
