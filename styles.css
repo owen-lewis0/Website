@@ -43,6 +43,7 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .navbar__menu {
@@ -284,9 +285,105 @@
   }
 }
 
+/* Currently Working On Section */
+.working-on {
+  background: #131313;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10rem 0;
+}
+
+.working-on h1 {
+  background-color: #B29146;
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+}
+
+.working-on__wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  align-items: center;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+
+.working-on__description {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0 2rem;
+  max-width: 300px;
+}
+
+.working-on__description p {
+  line-height: 1.6;
+}
+
+.working-on__card {
+  margin: 10px;
+  height: 425px;
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: 0.3s ease-in;
+}
+
+.working-on__card--1 {
+  background-image: url(ECG.jpeg);
+}
+
+.working-on__card--2 {
+  color: #000;
+  background-image: url(Kresling_arm.jpeg);
+}
+
+.working-on__card h2 {
+  text-align: center;
+}
+
+.working-on__card p {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+.working-on__card:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .working-on__wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .working-on__description {
+    max-width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+}
+
 /* About / Contact Section */
 .main {
-  background-color: #008C4A;
+  background-color: #131313;
   padding: 10rem 0;
 }
 
@@ -324,11 +421,6 @@
 .main__content h2 {
   font-size: 4rem;
   background: #B29146;
-  background: linear-gradient(
-    to right,
-    #8f0eff,
-    #da22ff
-  );
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -394,19 +486,11 @@
   flex-direction: column;
   justify-content: center;
   color: #fff;
-  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
 }
 
 .fa-layer-group,
 .fa-users {
   font-size: 14rem;
-}
-
-#card-2 {
-  background: #ff512f;
-  background: -webkit-linear-gradient(to right, #dd2476, #ff512f);
-  background: linear-gradient(to right, #dd2476, #ff512f);
-  overflow: hidden;
 }
 
 .contact-image {
@@ -489,7 +573,7 @@
 
 /* Services Section */
 .services {
-  background: #131313;
+  background: #008C4A;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -499,10 +583,10 @@
 }
 
 .services h1 {
-  background-color: #ff8177;
-  background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+  background-color: #131313;
   background-size: 100%;
   background-clip: text;
+  text-shadow: -1px -1px #B29146;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
