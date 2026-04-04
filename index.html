@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
   </head>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <body>
     <!-- Navbar Section -->
     <nav class="navbar">
@@ -26,10 +27,13 @@
             <a href="#home" class="navbar__links" id="home-page">Who am I?</a>
           </li>
           <li class="navbar__item">
-            <a href="#services" class="navbar__links" id="about-page">My Projects</a>
+            <a href="#working-on" class="navbar__links" id="working-on-page">Working On</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#projects" class="navbar__links" id="about-page">My Projects</a>
           </li>
           <li class="navbar__btn">
-            <a href="#sign-up" class="button" id="signup">Contact Me</a>
+            <a href="#contact" class="button" id="signup">Contact Me</a>
           </li>
         </ul>
       </div>
@@ -41,7 +45,7 @@
         <div class="column__left">
           <h1 class="hero__heading"><span>Hello!</span></h1>
           <p class="hero__description">I'm a Computer Engineering and Computer Science Major at Northeastern. 
-            I'm interested in Robotic Sensing, Machine control, and Embedded Sofware.</p>
+            I'm interested in Robotic Sensing, Machine Control, and Embedded Sofware.</p>
           <a href="https://github.com/owen-lewis0" class="main__btn" target="_blank" rel="noopener noreferrer">My Github!</a>
         </div>
         <div class="column__right">
@@ -54,8 +58,29 @@
       </div>
     </div>
 
+    <!-- Currently Working On Section -->
+    <div class="working-on" id="working-on">
+      <h1>Currently Working On</h1>
+      <div class="working-on__wrapper">
+        <div class="working-on__description">
+          <p>A Heartrate monitor that filters signals from electrodes to display pulse on an oscilloscope. 
+            It utilizes a second-order high-pass filter for better noise reduction.</p>
+        </div>
+        <div class="working-on__card working-on__card--1">
+          <h2>ECG sensor</h2>
+        </div>
+        <div class="working-on__card working-on__card--2">
+          <h2>Soft Sensor Optimzation</h2>
+        </div>
+        <div class="working-on__description">
+          <p>A multiplexing circuit for selecting capacitive sensor values from a soft robotic arm. 
+            Later to be paired with a regressive learning model for ideal data selection.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Services Section -->
-    <div class="services" id="services">
+    <div class="services" id="projects">
       <h1>My Projects</h1>
       <div class="services__wrapper">
         <div class="services__card">
@@ -82,18 +107,16 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="main" id="sign-up">
+    <div class="main" id="contact">
       <div class="main__container">
         <div class="main__content">
           <h1>Contact Me</h1>
-          <h2>LinkedIn</h2>
           <p>Email: lewis.ow@northeastern.edu</p>
           <p>Cell: (617)-758-9467</p>
           <a href="https://www.linkedin.com/in/owenlewis0103" class="main__btn" target="_blank" rel="noopener noreferrer">Go To My LinkedIn</a>
         </div>
         <div class="main__img--container">
           <div class="main__img--card" id="card-2">
-            <!-- Replace the src with your image file -->
             <img src="Parses.jpeg" alt="Contact image" class="contact-image" />
           </div>
         </div>
